@@ -1,0 +1,14 @@
+.form-control.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.arrow-buttons{
+  cursor: pointer;
+  margin: 0 1rem  0  1rem;
+}

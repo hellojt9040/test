@@ -1,0 +1,278 @@
+<div class="container">
+  <form [formGroup]="user" class="needs-validation" (ngSubmit)="onSubmit()" scrollToInvalid>
+
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" id="collapse1" #collapse1 data-toggle="collapse" href="#collapseOne">
+            About You
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="yourSelf" class="">
+                <div class="form-group">
+                  <label for="fullName">FullName:</label>
+                  <input type="text" class="form-control" id="fullName" #fullName placeholder="fullName"
+                    formControlName="fullName" name="fullName">
+                </div>
+                <div class="form-group">
+                  <label for="motherName">MotherName:</label>
+                  <input type="text" class="form-control" id="motherName" placeholder="Enter motherName"
+                    formControlName="motherName" name="motherName">
+                </div>
+                <div class="form-group">
+                  <label for="dob">DOB:</label>
+                  <input type="text" class="form-control" id="dob" placeholder="Enter dob" formControlName="dob"
+                    name="dob">
+                </div>
+                <div>
+
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse2.click(); add1.focus();">fast_forward</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" id="collapse2" #collapse2 data-toggle="collapse" href="#collapseTwo">
+            Contacts
+          </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="contact" class="">
+                <div class="form-group">
+                  <label for="add1">Add1ress1:</label>
+                  <input type="text" class="form-control" id="add1" #add1 placeholder="add1" formControlName="add1"
+                    name="add1">
+                </div>
+                <div class="form-group">
+                  <label for="add2">Add1ress2:</label>
+                  <input type="text" class="form-control" id="add2" placeholder="Enter add2" formControlName="add2"
+                    name="add2">
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <input type="text" class="form-control" id="state" placeholder="Enter state" formControlName="state"
+                    name="state">
+                </div>
+                <div class="form-group">
+                  <label for="mob">Mobile:</label>
+                  <input type="text" class="form-control" id="mob" placeholder="Enter mob" formControlName="mob"
+                    name="mob">
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse1.click(); fullName.focus();">fast_rewind</mat-icon>
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse3.click(); temp1add1.focus();">fast_forward</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" id="collapse3" #collapse3 data-toggle="collapse" href="#collapseThree">
+            Temp1
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="temp1" class="">
+                <div class="form-group">
+                  <label for="temp1add1">Add1ress1:</label>
+                  <input type="text" class="form-control" #temp1add1 id="temp1add1" placeholder="temp1add1" formControlName="add1"
+                    name="add1">
+                </div>
+                <div class="form-group">
+                  <label for="temp1add2">Add1ress2:</label>
+                  <input type="text" class="form-control" id="temp1add2" placeholder="Enter temp1add2"
+                    formControlName="add2" name="add2">
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <input type="text" class="form-control" id="state" placeholder="Enter state" formControlName="state"
+                    name="state">
+                </div>
+                <div class="form-group">
+                  <label for="temp1mob">Mobile:</label>
+                  <input type="text" class="form-control" id="temp1mob" placeholder="Enter temp1mob"
+                    formControlName="mob" name="mob">
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse2.click(); add1.focus();">fast_rewind</mat-icon>
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse4.click(); temp2add1.focus();">fast_forward</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" name="collapse4" id="collapse4" #collapse4 data-toggle="collapse" href="#collapseFour">
+            Temp2
+          </a>
+        </div>
+        <div id="collapseFour" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="temp2" class="">
+                <div class="form-group">
+                  <label for="temp2add1">Add1ress1:</label>
+                  <input type="text" class="form-control" id="temp2add1" #temp2add1 placeholder="temp2add1" formControlName="add1"
+                    name="add1">
+                </div>
+                <div class="form-group">
+                  <label for="temp2add2">Add1ress2:</label>
+                  <input type="text" class="form-control" id="temp2add2" placeholder="Enter temp2add2"
+                    formControlName="add2" name="add2">
+                </div>
+                <div class="form-group">
+                  <label for="temp2state">State:</label>
+                  <input type="text" class="form-control" id="temp2state" placeholder="Enter temp2state"
+                    formControlName="state" name="state">
+                </div>
+                <div class="form-group">
+                  <label for="temp2mob">Mobile:</label>
+                  <input type="text" class="form-control" id="temp2mob" placeholder="Enter temp2mob"
+                    formControlName="mob" name="mob">
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse3.click(); temp1add1.focus();">fast_rewind</mat-icon>
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse5.click(); temp3add1.focus();">fast_forward</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <!-- <p>{{this.user.value | json}}</p> -->
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" id="collapse5" #collapse5 data-toggle="collapse" href="#collapseFive">
+            Temp3
+          </a>
+        </div>
+        <div id="collapseFive" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="temp3" class="">
+                <div class="form-group">
+                  <label for="temp3add1">Add1ress1:</label>
+                  <input type="text" class="form-control" #temp3add1 id="temp3add1" placeholder="temp3add1" formControlName="add1"
+                    name="add1">
+                </div>
+                <div class="form-group">
+                  <label for="temp3add2">Add1ress2:</label>
+                  <input type="text" class="form-control" id="temp3add2" placeholder="Enter temp3add2"
+                    formControlName="add2" name="add2">
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <input type="text" class="form-control" id="state" placeholder="Enter state" formControlName="state"
+                    name="state">
+                </div>
+                <div class="form-group">
+                  <label for="temp3mob">Mobile:</label>
+                  <input type="text" class="form-control" id="temp3mob" placeholder="Enter temp3mob"
+                    formControlName="mob" name="mob">
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse4.click(); temp2add1.focus();">fast_rewind</mat-icon>
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse6.click(); temp4add1.focus();">fast_forward</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" id="collapse6" #collapse6 data-toggle="collapse" href="#collapseSix">
+            Temp4
+          </a>
+        </div>
+        <div id="collapseSix" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <mat-card>
+              <div formGroupName="temp4" class="">
+                <div class="form-group">
+                  <label for="temp4add1">Add1ress1:</label>
+                  <input type="text" class="form-control" id="temp4add1" #temp4add1 placeholder="temp4add1" formControlName="add1"
+                    name="add1">
+                </div>
+                <div class="form-group">
+                  <label for="temp4add2">Add1ress2:</label>
+                  <input type="text" class="form-control" id="temp4add2" placeholder="Enter temp4add2"
+                    formControlName="add2" name="add2">
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <input type="text" class="form-control" id="state" placeholder="Enter state" formControlName="state"
+                    name="state">
+                </div>
+                <div class="form-group">
+                  <label for="temp4mob">Mobile:</label>
+                  <input type="text" class="form-control" id="temp4mob" placeholder="Enter temp4mob"
+                    formControlName="mob" name="mob">
+                </div>
+
+              </div>
+              <div class="d-flex">
+                <div class="example-button-container mx-auto">
+                    <mat-icon color="primary" class="arrow-buttons" (click)="collapse5.click(); temp3add1.focus();">fast_rewind</mat-icon>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <hr />
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+  </form>
+</div>
