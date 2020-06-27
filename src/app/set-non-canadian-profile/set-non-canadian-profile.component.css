@@ -1,0 +1,26 @@
+/* .main-container{
+  padding-top: 8rem;
+} */
+
+.content-head{
+  height: 2rem;
+}
+
+.form-fields{
+  font-weight: 500;
+}
+
+.q-drop{
+  height:26px;
+}
+
+.disclaimer{
+  background-color: gainsboro !important;
+  font-weight:600;
+  font-size: 1rem;
+}
+
+.dialog{
+  background-color: #5d9c5f;
+  height: 2rem;
+}
